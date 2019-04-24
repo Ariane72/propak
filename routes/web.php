@@ -24,10 +24,10 @@ Route::get('/listar', 'UsuarioController@listar',[
 
 Route::middleware(['auth'])->group(function (){
     Route::get('/dashboard', 'AutenticacaoController@privada')->name('dashboard');
-    Route::get('/usuarios/{id}/editar', 'UsuarioController@editar')->name('editar');
-    Route::post('/usuarios/{id}/atualizar', 'UsuarioController@atualizar')->name('atualizar');
-    Route::get('/usuarios/{id}/deletar', 'UsuarioController@deletar')->name('deletar');
-    route::get('/usuarios/{id}/teste', 'UsuarioController@teste')->name('teste');
+    Route::get('/usuarios/{uuid}/editar', 'UsuarioController@editar')->name('editar');
+    Route::post('/usuarios/{uuid}/atualizar', 'UsuarioController@atualizar')->name('atualizar');
+    Route::get('/usuarios/deletar/{uuid}', 'UsuarioController@deletar')->name('deletar');
+    route::get('/usuarios/teste/{uuid}', 'UsuarioController@teste')->name('teste');
     
 
 

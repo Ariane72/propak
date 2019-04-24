@@ -28,7 +28,7 @@
             <!-- /.box-header -->
             <!-- form start -->
             <form  method="post" action="{{ route('salvar') }}" enctype="multipart/form-data"  role="form">
-            {{ csrf_field() }}
+            {!! csrf_field() !!}
               <div class="box-body">
                 <div class="form-group">
                   <label for="nome">Nome</label>
@@ -106,7 +106,7 @@
                                 <td>
                                 @can('update', App\Usuario::class)
                                     <a href="{{route('editar', $usuario->id)}}"><i class="fa fa-pencil"></i></a>
-                                    <a  data-toggle="modal" data-target="#exampleModal" href="{{route('teste', $usuario->id)}}" ><i style="color:#D43644;" class="fa fa-trash"></i></a>
+                                    <a  data-toggle="modal" data-target="#exampleModal" href="{{route('teste', $usuario->uuid)}}" ><i style="color:#D43644;" class="fa fa-trash"></i></a>
                                 @endcan
                                 </td>                                
                             </tr>                         
@@ -128,7 +128,7 @@
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <a type="button" href="{{route('deletar',  $usuario->id)}}"  type="button" class="btn btn-primary">Delete</a>
+                        <a type="button" href="{{route('deletar',  $usuario->uuid)}}"  type="button" class="btn btn-primary">Delete</a>
                       </div>
                     </div>
                   </div>

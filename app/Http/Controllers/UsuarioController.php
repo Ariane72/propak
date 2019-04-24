@@ -6,6 +6,7 @@ use Session;
 use Illuminate\Http\Request;
 use App\Usuario;
 use Illuminate\Support\Facades\Hash;
+use Webpatser\Uuid\Uuid;
 
 class UsuarioController extends Controller
 {
@@ -17,16 +18,15 @@ class UsuarioController extends Controller
 
    
     
-    public function deletar($id)
+    public function deletar($uuid)
 	{
         $this->authorize('delete', Usuario::class);
-		// delete
-		$usuario = Usuario::find($id);
-        $usuario->delete();
+		
+		Usuario::where('uuid',$uuid)->delete();
+        
         
         $usuarios = Usuario::all();
-		// redirect
-		Session::flash('message', 'Successfully deleted the nerd!');
+		
         return view('usuarios.registrar',  compact('usuario', 'usuarios'));
 	}
 
