@@ -22,6 +22,8 @@ Route::get('/listar', 'UsuarioController@listar',[
    ]);
 
 
+
+   Route::get('/teste', 'AutenticacaoController@teste')->name('teste');
 Route::middleware(['auth'])->group(function (){
     Route::get('/dashboard', 'AutenticacaoController@privada')->name('dashboard');
     Route::get('/usuarios/{uuid}/editar', 'UsuarioController@editar')->name('editar');

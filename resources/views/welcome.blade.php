@@ -320,6 +320,7 @@
         @if (Auth::check())
         <div class="pull-left info">
           <p>{{ Auth::user()->login }}</p>
+          teste
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
         @endif

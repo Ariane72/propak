@@ -1,7 +1,7 @@
 @extends('welcome')
 
 @section('content')
-
+<example></example>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -157,6 +157,10 @@
 
 
     <div class="control-sidebar-bg"></div>
+</div>
+
+<div>
+
 </div>
 <!-- ./wrapper -->
 <script>

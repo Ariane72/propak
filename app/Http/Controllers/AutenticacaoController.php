@@ -14,6 +14,10 @@ class AutenticacaoController extends Controller
         return view('shared.publica');
     }
 
+    public function teste(){
+        return view('teste');
+    }
+
     public function privada(){
         return view('shared.privada');
     }
