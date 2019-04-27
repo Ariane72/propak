@@ -15,6 +15,7 @@ class AutenticacaoController extends Controller
     }
 
     public function teste(){
+
         return view('teste');
     }
 
